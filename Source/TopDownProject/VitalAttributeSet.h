@@ -32,4 +32,8 @@ class TOPDOWNPROJECT_API UVitalAttributeSet : public UTopDownAttributeSet
     UPROPERTY(BlueprintReadOnly, Category = "Vital")
     FGameplayAttributeData MaxMana;
     ATTRIBUTE_ACCESSORS(UVitalAttributeSet, MaxMana)
+
+protected:
+    virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
+
 };
